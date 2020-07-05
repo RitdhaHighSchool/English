@@ -90,7 +90,12 @@
 			<div class="glitch__img bannerimg"></div>
 			<div class="container">
 
-				<h2 style="display:inline; padding-right: 16px; margin-right: -16px;" class="content__title">Ritdha </h2><h2 class="newlinename" style="display:inline">High School</h2>
+				<h1><!--
+				--><span class="inlineblock">Ritdha</span><!--
+				--><span class="spaceblock">&nbsp;</span><!--
+				--><span class="newlineblock">High School<!--
+				--></span><!--
+				--></h1>
 				<h3 class="content__text">AD • ASTRA • SAPIENTIAM</h3>
 				<div class="clearfix"></div>
 				<!-- hide 
@@ -113,11 +118,9 @@
 		<script src="https://ritdha.com/js/imagesloaded.pkgd.min.js"></script>
 		<script src="https://ritdha.com/js/glitch.js"></script>
 	</div>
-
 	<!-- //banner -->
-	<!-- about -->
-	<!-- //about -->
-	<!-- Our services -->
+
+	<!-- curriculum -->
 	<div class="curriculum" id="curriculum">
 		<h3 class="wthree_head">Curricula</h3>
 		<div class="container">
@@ -136,10 +139,11 @@
 					</div>
 				</div>
 				<div class="clearfix"></div>
+				</div>
 			</div>
 		</div>
 	</div>
-	<!--  gallery -->
+	<!-- //curriculum -->
 
 	<!-- teachers -->
 	<div class="teachers" id="teachers">
@@ -201,17 +205,6 @@
 		</div>
 	</div>
 	<script src="https://ritdha.com/js/jquery.username.js "></script>
-	<!-- start-smoth-scrolling -->
-	<script type="text/javascript" src="https://ritdha.com/js/move-top.js"></script>
-	<script type="text/javascript" src="https://ritdha.com/js/easing.js"></script>
-	<script type="text/javascript">
-		jQuery(document).ready(function ($) {
-			$(".scroll").click(function (event) {
-				event.preventDefault();
-				$('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
-			});
-		});
-	</script>
 	<!-- js for portfolio  -->
 	<script src="https://ritdha.com/js/jquery.chocolat.js "></script>
 	<link rel="stylesheet " href="https://ritdha.com/css/chocolat.css " type="text/css" media="all" />
@@ -221,14 +214,17 @@
 			$('.appform a').Chocolat();
 		});
 	</script>
-	<!-- /js for portfolio  -->
-	<!-- start-smoth-scrolling -->
+	<script type="text/javascript">
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+				$('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+			});
+		});
+	</script>
 	<!-- for bootstrap working -->
 	<script src="https://ritdha.com/js/bootstrap.js"></script>
 	<!-- //for bootstrap working -->
-	<!-- here stars scrolling icon -->
-
-	<!-- //here ends scrolling icon -->
 	<audio type="audio/mp3" preload="auto" autoplay>
 		<source src="https://ritdha.com/audio/theme.mp3" type="audio/mp3" preload="auto">
 	</audio>
