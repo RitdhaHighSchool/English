@@ -96,7 +96,17 @@
 				--><span class="newlineblock">High School<!--
 				--></span><!--
 				--></h1>
-				<h3 class="content__text">AD • ASTRA • SAPIENTIAM</h3>
+				<h3 class="content__text">2020 Semester BEGINS</h3>
+				<div class="clearfix"></div>
+				<ul id="countdown">
+					<li><span class="days">00</span><p class="days_text">Days</p></li>
+					<li class="seperator">:</li>
+					<li><span class="hours">00</span><p class="hours_text">Hours</p></li>
+					<li class="seperator">:</li>
+					<li><span class="minutes">00</span><p class="minutes_text">Minutes</p></li>
+					<li class="seperator">:</li>
+					<li><span class="seconds">00</span><p class="seconds_text">Seconds</p></li>
+				</ul>
 				<div class="clearfix"></div>
 				<!-- hide 
 				<div class="appform">
@@ -161,10 +171,10 @@
 			<div class="clearfix"> </div>
 			<div class="col-md-4 wthree_teachers_grid col-centered ">
 				<div class="hovereffect">
-					<img src="https://ritdha.com/images/headadministration.png" alt="Ms. Ladda Ngamkul" class="img-responsive" />
+					<img src="https://ritdha.com/images/academicadvisor.png" alt="Ms. Ladda Ngamkul" class="img-responsive" />
 				</div>
-				<h4>Ms. Ladda Ngamkul</h4>
-				<p id="head">Head Administrator</p>
+				<h4>Academic Advisor</h4>
+				<!--<p id="head">Academic Advisor</p>-->
 			</div>
 			<div class="clearfix"> </div>
 		</div>
@@ -204,6 +214,23 @@
 			</p>
 		</div>
 	</div>
+	<script class="source" type="text/javascript">
+		$('#countdown').countdown({
+			date: '09/06/2020 20:30:00',
+			offset: +7, //
+			day: 'Days',
+			days: 'Days',
+			hour: 'Hour',
+			hours: 'Hours',
+			minute: 'Minute',
+			minutes: 'Minutes',
+			second: 'Second',
+			seconds: 'Seconds',
+			hideOnComplete: true
+		}, function(container) {
+			alert('Welcome back to Ritdha High School!');
+		});
+	</script>
 	<script src="https://ritdha.com/js/jquery.username.js "></script>
 	<!-- js for portfolio  -->
 	<script src="https://ritdha.com/js/jquery.chocolat.js "></script>
