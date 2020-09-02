@@ -38,16 +38,13 @@
 	<meta name="msapplication-TileColor" content="#071434">
 	<link href="https://ritdha.com/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="https://ritdha.com/css/style.css" rel="stylesheet" type="text/css" media="all" />
-	<!-- js -->
-	<script type="text/javascript" src="https://ritdha.com/js/jquery-2.1.4.min.js"></script>
-	<script type="text/javascript" src="https://ritdha.com/js/jquery.countdown.min.js?v=1.0.0.0"></script>
-	<!-- //js -->
 	<!-- font-awesome icons -->
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" rel="stylesheet">
 	<!-- //font-awesome icons -->
 	<link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,700|Sarabun:400,700&display=swap" rel="stylesheet">
 	<link href="https://ritdha.com/css/notoserif.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="https://ritdha.com/css/glitch.css" />
+	<link rel="stylesheet " href="https://ritdha.com/css/css/jquery.fancybox.css " type="text/css" media="all" />
 </head>
 
 <body class="glitch1 loading">
@@ -188,7 +185,7 @@
 			</div>
 			<div class="videoWrapper">
 				<iframe src="https://www.youtube.com/embed/wB-F9hvQKRU?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0"
-					allowfullscreen></iframe>
+					allowfullscreen id="intro"></iframe>
 			</div>
 			<div class="clearfix"> </div>
 		</div>
@@ -214,25 +211,37 @@
 			</p>
 		</div>
 	</div>
+	<div id="watch" >
+		<h3>Welcome back to Ritdha High School</h3>
+			<div class="readmore">
+				<a href="https://www.gmm25.com/live.html">Click here to visit the school</a>
+			</div>
+	</div>
+	<audio type="audio/mp3" preload="auto" autoplay>
+		<source src="https://ritdha.com/audio/theme.mp3" type="audio/mp3" preload="auto">
+	</audio>
+	<!-- js -->
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script type="text/javascript" src="https://ritdha.com/js/jquery.countdown.min.js?v=1.0.0.0"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+	<!-- //js -->
 	<script class="source" type="text/javascript">
 		$('#countdown').countdown({
 			date: '09/06/2020 20:30:00',
 			offset: +7, //
 			hideOnComplete: true
 		}, function(container) {
-			alert('Welcome back to Ritdha High School!');
+			$('#countdowntitle').hide();
+			$('audio').each(function(){
+    		this.pause();
+    		this.currentTime = 0;
+			}); 
+			$.fancybox.open( $('#watch'), {
+  		});
 		});
 	</script>
-	<script src="https://ritdha.com/js/jquery.username.js "></script>
+	<script src="https://ritdha.com/js/jquery.username.js"></script>
 	<!-- js for portfolio  -->
-	<script src="https://ritdha.com/js/jquery.chocolat.js "></script>
-	<link rel="stylesheet " href="https://ritdha.com/css/chocolat.css " type="text/css" media="all" />
-	<!--light-box-files -->
-	<script type="text/javascript">
-		$(function () {
-			$('.appform a').Chocolat();
-		});
-	</script>
 	<script type="text/javascript">
 		jQuery(document).ready(function ($) {
 			$(".scroll").click(function (event) {
@@ -241,12 +250,21 @@
 			});
 		});
 	</script>
+	<script>
+		focus();
+		var listener = addEventListener('blur', function() {
+			if(document.activeElement === document.getElementById('intro')) {
+				$('audio').each(function(){
+    			this.pause();
+    			this.currentTime = 0;
+				});
+			}
+			removeEventListener(listener);
+		});
+	</script>
 	<!-- for bootstrap working -->
 	<script src="https://ritdha.com/js/bootstrap.js"></script>
 	<!-- //for bootstrap working -->
-	<audio type="audio/mp3" preload="auto" autoplay>
-		<source src="https://ritdha.com/audio/theme.mp3" type="audio/mp3" preload="auto">
-	</audio>
 </body>
 
 </html>
