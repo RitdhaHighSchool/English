@@ -97,13 +97,19 @@
 				<h3 class="content__text">2020 Semester BEGINS</h3>
 				<div class="clearfix"></div>
 				<ul id="countdown">
-					<li><span class="days">00</span><p class="days_text">Days</p></li>
-					<li class="seperator">:</li>
+					<span id="days">
+						<li><span class="days">00</span><p class="days_text">Days</p></li>
+						<li class="seperator">:</li>
+					</span>
 					<li><span class="hours">00</span><p class="hours_text">Hours</p></li>
 					<li class="seperator">:</li>
 					<li><span class="minutes">00</span><p class="minutes_text">Minutes</p></li>
 					<li class="seperator">:</li>
 					<li><span class="seconds">00</span><p class="seconds_text">Seconds</p></li>
+					<span id="milliseconds" style="display:none">
+						<li class="seperator">:</li>
+						<li><span class="milliseconds">00</span><p class="milliseconds_text">&nbsp;</p></li>
+					</span>
 				</ul>
 				<div class="clearfix"></div>
 				<!-- hide 
