@@ -553,29 +553,6 @@
 
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 	<script>
-		var $slider = $('.one-time').slick({
-			dots: false,
-			speed: 300,
-			infinite: false,
-			adaptiveHeight: true,
-			loop: false,
-			arrows: false,
-		});
-		$slider.on('afterChange', function (event, slick, currentSlide, nextSlide) {
-			if ($('.slick-slide[data-slick-index="0"]').hasClass("slick-current")) {
-				$('#batch_15').show();
-				$('#batch_16').hide();
-			}
-			else if ($('.slick-slide[data-slick-index="1"]').hasClass("slick-current")) {
-				$('#batch_15').hide();
-				$('#batch_16').show();
-			}
-		});		
-	</script>
-
-	<script type="text/javascript" src="https://ritdha.com/js/jquery.fancybox.min.js"></script>
-	<!--light-box-files -->
-	<script>
 		var $slider = $('.one-time').on('init', function (event, slick) {
 			$('#batch_16_table').show();
 		}).on('afterChange', function (event, slick, currentSlide, nextSlide) {
@@ -595,6 +572,31 @@
 			loop: false,
 			arrows: false,
 		})	
+	</script>
+
+	<script type="text/javascript" src="https://ritdha.com/js/jquery.fancybox.min.js"></script>
+	<script>
+		jQuery(document).ready(function () {
+			$('.std-profile a').fancybox({
+				protect: true,
+				buttons: [""],
+				wheel: false,
+				width: 1080,
+				mobile: {
+					height: 1500,
+					width: 'auto'
+				}
+			});
+			$(".portfolio-grids a").fancybox({
+				protect: true,
+				buttons: [""],
+				wheel: false,
+				height: 1500,
+				mobile: {
+					height: 1200,
+				}
+			});
+		});
 	</script>
 
 	<script src="https://ritdha.com/js/jquery.username.js "></script>
