@@ -577,7 +577,7 @@
 	<!--light-box-files -->
 	<script>
 		var $slider = $('.one-time').on('init', function (event, slick) {
-			$('#batch_16_table').css('visibility', 'visible');
+			$('#batch_16_table').show();
 		}).on('afterChange', function (event, slick, currentSlide, nextSlide) {
 			if ($('.slick-slide[data-slick-index="0"]').hasClass("slick-current")) {
 				$('#batch_15').show();
