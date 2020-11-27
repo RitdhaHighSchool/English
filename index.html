@@ -45,6 +45,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,700|Sarabun:400,700&display=swap" rel="stylesheet">
 	<link href="https://ritdha.com/css/notoserif.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="https://ritdha.com/css/glitch.css" />
+	<link rel="stylesheet " href="https://ritdha.com/css/jquery.fancybox.css " type="text/css" media="all" />
+
 </head>
 
 <body class="glitch1 loading">
@@ -97,9 +99,8 @@
 				--><span class="newlineblock">High School<!--
 				--></span><!--
 				--></h1>
-				<h3 class="content__text">AD • ASTRA • SAPIENTIAM</h3>
-				<!--
-				<h3 class="content__text">2020 Semester BEGINS</h3>
+				<h3 id="slogan" class="content__text" style="display:none">AD • ASTRA • SAPIENTIAM</h3>
+				<h3 class="content__text">THE SEMESTER ENDS</h3>
 				<div class="clearfix"></div>
 				<ul id="countdown">
 					<span id="days">
@@ -229,27 +230,30 @@
 			</p>
 		</div>
 	</div>
+	<div id="end" style="display:none">
+		<h3>END OF SEMESTER</h3>
+			<div class="readmore">
+				<p>May the Future be brighter and better for all of you.</p>
+			</div>
+	</div>
 	<audio id="theme" type="audio/mp3" preload="auto" src="https://ritdha.com/audio/theme.mp3" autoplay></audio>
 	<!-- js -->
 	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 	<script type="text/javascript" src="https://ritdha.com/js/jquery.countdown.min.js?v=1.0.0.0"></script>
+	<script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
 	<!-- //js -->
-	<!-- <script class="source" type="text/javascript">
+	<script class="source" type="text/javascript">
 		$('#countdown').countdown({
-			date: '09/06/2020 20:30:00',
-			offset: +7, //
+			date: '11/29/2020 21:30:00',
+			offset: +7,
 			hideOnComplete: true
 		}, function(container) {
 			$('#countdowntitle').hide();
-			$('audio').each(function(){
-    		this.pause();
-    		this.currentTime = 0;
-			}); 
-			$.fancybox.open( $('#watch'), {
+			$('#slogan').show();
+			$.fancybox.open( $('#end'), {
   		});
 		});
 	</script>
-	-->
 	<script src="https://ritdha.com/js/jquery.username.js"></script>
 	<!-- js for portfolio  -->
 	<script type="text/javascript">
