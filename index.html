@@ -99,9 +99,10 @@
 				--><span class="newlineblock">High School<!--
 				--></span><!--
 				--></h1>
-				<h3 id="slogan" class="content__text" style="display:none">AD • ASTRA • SAPIENTIAM</h3>
+				<h3 id="slogan" class="content__text" >AD • ASTRA • SAPIENTIAM</h3>
 				<h3 id="countdowntitle" class="content__text">THE SEMESTER ENDS</h3>
 				<div class="clearfix"></div>
+				<!--
 				<ul id="countdown">
 					<span id="days">
 						<li><span class="days">00</span><p class="days_text">Days</p></li>
@@ -122,6 +123,7 @@
 					</span>
 				</ul>
 				<div class="clearfix"></div>
+			  -->
 				<!-- hide 
 				<div class="appform">
 				<a href="https://ritdha.com/images/timelineen.jpg" target="_blank">
@@ -242,15 +244,8 @@
 	<script type="text/javascript" src="https://ritdha.com/js/jquery.fancybox.min.js"></script>
 	<!-- //js -->
 	<script class="source" type="text/javascript">
-		$('#countdown').countdown({
-			date: '11/29/2020 21:30:00',
-			offset: +7,
-			hideOnComplete: true
-		}, function(container) {
-			$('#countdowntitle').hide();
-			$('#slogan').show();
-			$.fancybox.open( $('#end'), {
-  		});
+		$(document).ready(function() {
+			$.fancybox.open( $('#end'), {});
 		});
 	</script>
 	<script src="https://ritdha.com/js/jquery.username.js"></script>
